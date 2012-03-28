@@ -1,0 +1,851 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License:  none (public domain)
+ */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,ul {
+	list-style: none;
+}
+
+blockquote,q {
+	quotes: none;
+}
+
+blockquote:before,blockquote:after,q:before,q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	font-family: Helvetica;
+}
+
+#content {
+	margin: 0 auto;
+	max-width: 960px;
+	padding: 50px 0 0 0;
+}
+
+h1, h2{
+	margin: 0 0 20px 0;
+}
+
+#browser-support{
+	color: red;
+	display: none;
+	margin: 20px 0;
+}
+
+#content ul {
+	margin: 0 auto;
+	min-width: 480px;
+}
+
+#content ul li {
+	display: inline-block;
+	margin: 0 18px 36px 18px;
+}
+
+.product {
+	border: #ccc solid 1px;
+	list-style: none;
+	min-height: 400px;
+	padding: 20px;
+	vertical-align: top;
+	width: 400px;
+}
+
+.product-image {
+	display: table-cell;
+	height: 200px;
+	margin: 0 0 20px 0;
+	vertical-align: middle;
+	width: 400px;
+}
+
+.product-details {
+	clear: both;
+	padding: 20px 0 0 0;
+}
+
+.product img {
+	display: block;
+	margin: 0 auto;
+	max-height: 200px;
+	max-width: 360px;
+}
+
+.purchase {
+	background: #25a8df;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	bottom: 0;
+	color: white;
+	cursor: pointer;
+	float: right;
+	font-size: 1.2em;
+	font-weight: bold;
+	padding: 10px;
+}
+
+.purchase:hover {
+	background: #557ea6;
+}
+
+.product-description {
+	clear: both;
+	padding: 20px 0;
+}
+
+.product h3 {
+	float: left;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.price {
+	float: right;
+}
+
+@keyframes "showDesc" {
+ 0% {
+   	opacity: 0;
+   	visibility: hidden;
+ }
+ 100% {
+   	opacity: 1;
+   	visibility: visible;
+ }
+
+}
+
+@-moz-keyframes showDesc {
+ 0% {
+   opacity: 0;
+   visibility: hidden;
+ }
+ 100% {
+   opacity: 1;
+   visibility: visible;
+ }
+
+}
+
+@-webkit-keyframes "showDesc" {
+ 0% {
+   filter: alpha(opacity=0);
+   opacity: 0;
+   visibility: hidden;
+ }
+ 100% {
+   filter: alpha(opacity=100);
+   opacity: 1;
+   visibility: visible;
+ }
+
+}
+
+@-ms-keyframes "showDesc" {
+ 0% {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   visibility: hidden;
+ }
+ 100% {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   filter: alpha(opacity=100);
+   opacity: 1;
+   visibility: visible;
+ }
+
+}
+
+/*@keyframes "hideDesc" {
+ 99% {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   	filter: alpha(opacity=0);
+   	opacity: 0;
+   	visibility: hidden;
+ }
+ 100% {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   	filter: alpha(opacity=100);
+   	opacity: 1;
+ }
+
+}
+
+@-moz-keyframes hideDesc {
+ 99% {
+   opacity: 0;
+   visibility: hidden;
+ }
+ 100% {
+   opacity: 1;
+ }
+
+}
+
+@-webkit-keyframes "hideDesc" {
+ 99% {
+   opacity: 0;
+   visibility: hidden;
+ }
+ 100% {
+   opacity: 1;
+ }
+
+}
+
+@-ms-keyframes "hideDesc" {
+ 99% {
+   opacity: 0;
+   visibility: hidden;
+ }
+ 100% {
+   opacity: 1;
+ }
+
+}*/
+
+/*SHOWCASE*/
+.showcase .item.sofa .description {
+	-webkit-animation: showDesc 2s linear 0s;
+	-moz-animation: showDesc 2s linear 0s;
+	-ms-animation: showDesc 2s linear 0s;
+	animation: showDesc 2s linear 0s;
+
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-ms-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+.showcase .item.clock .description {
+	-webkit-animation: showDesc 2s linear 2s;
+	-moz-animation: showDesc 2s linear 2s;
+	-ms-animation: showDesc 2s linear 2s;
+	animation: showDesc 2s linear 2s;
+
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-ms-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+.showcase .item.picture .description {
+	-webkit-animation: showDesc 2s linear 4s;
+	-moz-animation: showDesc 2s linear 4s;
+	-ms-animation: showDesc 2s linear 4s;
+	animation: showDesc 2s linear 4s;
+
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-ms-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+.showcase .item.tv .description {
+	-webkit-animation: showDesc 2s linear 6s;
+	-moz-animation: showDesc 2s linear 6s;
+	-ms-animation: showDesc 2s linear 6s;
+	animation: showDesc 2s linear 6s;
+
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-ms-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+.showcase .item.remote .description {
+	-webkit-animation: showDesc 2s linear 8s;
+	-moz-animation: showDesc 2s linear 8s;
+	-ms-animation: showDesc 2s linear 8s;
+	animation: showDesc 2s linear 8s;
+
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-ms-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+.showcase .item.picture2 .description {
+	-webkit-animation: showDesc 2s linear 10s;
+	-moz-animation: showDesc 2s linear 10s;
+	-ms-animation: showDesc 2s linear 10s;
+	animation: showDesc 2s linear 10s;
+
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-ms-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+.showcase .item.pot-plant .description {
+	-webkit-animation: showDesc 2s linear 12s;
+	-moz-animation: showDesc 2s linear 12s;
+	-ms-animation: showDesc 2s linear 12s;
+	animation: showDesc 2s linear 12s;
+
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-ms-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+.hide-desc .description {
+	-webkit-animation: hideDesc 1s linear 0s;
+	-moz-animation: hideDesc 1s linear 0s;
+	-ms-animation: hideDesc 1s linear 0s;
+	animation: hideDesc 1s linear 0s;
+}
+
+/*!SHOWCASE*/
+/*ROOM STRUCTURE*/
+#room1 {
+	display: none; /*We'll hide the showcase until the JS tells us the browser supports the features necessary for it to run*/
+	height: 600px;
+	margin: 0 auto;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	-webkit-perspective: 900;
+	-moz-perspective: 900;
+	-o-perspective: 900;
+	-ms-perspective: 900;
+	perspective: 900;
+}
+
+.room {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	
+	pointer-events: none;
+	-webkit-transform: rotateY(-20deg) translateZ(0px);
+	-moz-transform: rotateY(-20deg) translateZ(0px);
+	-o-transform: rotateY(-20deg) translateZ(0px);
+	-ms-transform: rotateY(-20deg) translateZ(0)px;
+	transform: rotateY(-20deg) translateZ(0px);
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.first-wall, .second-wall, .third-wall, .fourth-wall, .floor {
+	height: 100%;
+	list-style: none;
+	position: absolute;
+	width: 1200px;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	
+}
+
+.floor {
+	/*url("../images/bg-floor.jpg") */
+	background: #b97746;
+
+	-webkit-transform: rotateX(90deg) translateZ(0);
+	-moz-transform: rotateX(90deg) translateZ(0);
+	-o-transform: rotateX(90deg) translateZ(0);
+	-ms-transform: rotateX(90deg) translateZ(0);
+	transform: rotateX(90deg) translateZ(0);
+	height: 1200px;
+	width: 1200px;
+}
+
+.first-wall {
+/*	background-image:  url("../images/bg-skirting.jpg"), url("../images/bg-wallpaper1.jpg");
+	background-repeat: repeat-x, repeat;
+	background-position: 0 100%, 0;*/
+	background-color: #f2e7c4;
+
+	-webkit-transform: rotateY(0deg) translateZ(-600px);
+	-moz-transform: rotateY(0deg) translateZ(-600px);
+	-o-transform: rotateY(0deg) translateZ(-600px);
+	-ms-transform: rotateY(0deg) translateZ(-600px);
+	transform: rotateY(0deg) translateZ(-600px);
+}
+
+.second-wall {
+	/*background-image:  url("../images/bg-skirting.jpg"), url("../images/bg-wallpaper2.jpg");
+	background-repeat: repeat-x, repeat;
+	background-position: 0 100%, 0;*/
+	background-color: #E7CF9C;
+
+	-webkit-transform: rotateY(-90deg) translateZ(-600px);
+	-moz-transform: rotateY(-90deg) translateZ(-600px);
+	-o-transform: rotateY(-90deg) translateZ(-600px);
+	-ms-transform: rotateY(-90deg) translateZ(-600px);
+	transform: rotateY(-90deg) translateZ(-600px);
+}
+
+.third-wall {
+	/*background-image:  url("../images/bg-skirting.jpg"), url("../images/bg-wallpaper1.jpg");
+	background-repeat: repeat-x, repeat;
+	background-position: 0 100%, 0;*/
+	background-color: #f2e7c4;
+
+	-webkit-transform: rotateY(180deg) translateZ(-600px);
+	-moz-transform: rotateY(180deg) translateZ(-600px);
+	-o-transform: rotateY(180deg) translateZ(-600px);
+	-ms-transform: rotateY(180deg) translateZ(-600px);
+	transform: rotateY(180deg) translateZ(-600px);
+}
+
+.fourth-wall {
+	/*background-image:  url("../images/bg-skirting.jpg"), url("../images/bg-wallpaper2.jpg");
+	background-repeat: repeat-x, repeat;
+	background-position: 0 100%, 0;*/
+	background-color: #E7CF9C;
+
+	-webkit-transform: rotateY(90deg) translateZ(-600px);
+	-moz-transform: rotateY(90deg) translateZ(-600px);
+	-o-transform: rotateY(90deg) translateZ(-600px);
+	-ms-transform: rotateY(90deg) translateZ(-600px);
+	transform: rotateY(90deg) translateZ(-600px);
+}
+
+/*!ROOM STRUCTURE*/
+/*PRODUCTS*/
+.item {
+	font-family: Helvetica;
+	font-size: 1.2em;
+	position: absolute;
+	pointer-events: auto;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+
+	-webkit-transform: translateZ(1px);
+	-moz-transform: translateZ(1px);
+	-o-transform: translateZ(1px);
+	-ms-transform: translateZ(1px);
+	transform: translateZ(1px); /*each item should be moved forward atleast 1px to stop it from flashing*/
+}
+
+.item a:hover + .description {
+	/*if hovering over the product image, show its sibling description*/
+	visibility: visible;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	-ms-transition-duration: 1s;
+	transition-duration: 1s;
+}
+
+.item h3 {
+	text-transform: uppercase;
+}
+
+.item p,.item h3 {
+	margin: 0 0 10px 0;
+}
+
+.item .description {
+	visibility: hidden;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	pointer-events: none;
+}
+
+.description {
+	background: rgba(0, 0, 0, 0.4);
+
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	color: white;
+	padding: 20px;
+	position: absolute;
+	width: 280px;
+}
+
+.item.remote {
+	bottom: 300px;
+	cursor: pointer;
+	left: 450px;
+
+	-webkit-transform: translateZ(2px) rotateX(30deg);
+	-moz-transform: translateZ(2px) rotateX(30deg);
+	-o-transform: translateZ(2px) rotateX(30deg);
+	-ms-transform: translateZ(2px) rotateX(30deg);
+	transform: translateZ(2px) rotateX(30deg);
+}
+
+.item.remote .description {
+	-webkit-transform: translateZ(30px) rotateX(240deg) rotateY(180deg);
+	-moz-transform: translateZ(30px) rotateX(240deg) rotateY(180deg);
+	-o-transform: translateZ(30px) rotateX(240deg) rotateY(180deg);
+	-ms-transform: translateZ(30px) rotateX(240deg) rotateY(180deg);
+	transform: translateZ(30px) rotateX(240deg) rotateY(180deg);
+	left: -200px;
+}
+
+.item.pot-plant {
+	height: 100px;
+	left: -20px;
+	position: relative;
+	top: 120px;
+	-webkit-transform-style: preserve-3d;
+/*	-moz-transform-style: preserve-3d;*/
+
+	-webkit-transform: translateZ(10px) rotateY(20deg);
+	-moz-transform: translateZ(10px) rotateY(20deg);
+	-o-transform: translateZ(10px) rotateY(20deg);
+	-ms-transform: translateZ(10px) rotateY(20deg);
+	transform: translateZ(10px) rotateY(20deg);
+}
+
+.item.pot-plant img {
+	left: 0;
+	position: absolute;
+
+	-webkit-transform: translateZ(11px);
+	-moz-transform: translateZ(11px);
+	-o-transform: translateZ(11px);
+	-ms-transform: translateZ(11px);
+	transform: translateZ(11px);
+}
+
+.item.pot-plant img:nth-child(2) {
+	-webkit-transform: rotateY(90deg);
+	-moz-transform: rotateY(90deg);
+	-o-transform: rotateY(90deg);
+	-ms-transform: rotateY(90deg);
+	transform: rotateY(90deg);
+}
+
+.item.pot-plant .description {
+	-webkit-transform: translateZ(100px) rotateY(30deg);
+	-moz-transform: translateZ(100px) rotateY(30deg);
+	-o-transform: translateZ(100px) rotateY(30deg);
+	-ms-transform: translateZ(100px) rotateY(30deg);
+	transform: translateZ(100px) rotateY(30deg);
+	left: 0;
+	top: 100px;
+}
+
+.item.sofa {
+	left: 200px;
+	bottom: -25px;
+
+	-webkit-transform: translateZ(100px) scale(0.8);
+	-moz-transform: translateZ(100px) scale(0.8);
+	-o-transform: translateZ(100px) scale(0.8);
+	-ms-transform: translateZ(100px) scale(0.8);
+	transform: translateZ(100px) scale(0.8);
+}
+
+.item.sofa .description {
+	-webkit-transform: translateZ(-99px);
+	-moz-transform: translateZ(-99px);
+	-o-transform: translateZ(-99px);
+	-ms-transform: translateZ(-99px);
+	transform: translateZ(-99px);
+	left: 225px;
+	top: -200px;
+}
+
+.item.clock {
+	height: 100px;
+	right: 100px;
+	top: 70px;
+
+	-webkit-transform: translateZ(1px);
+	-moz-transform: translateZ(1px);
+	-o-transform: translateZ(1px);
+	-ms-transform: translateZ(1px);
+	transform: translateZ(1px);
+}
+
+.item.clock img {
+	width: 200px;
+}
+
+.item.clock .description {
+	-webkit-transform: translateZ(120px) rotateY(-45deg);
+	-moz-transform: translateZ(120px) rotateY(-45deg);
+	-o-transform: translateZ(120px) rotateY(-45deg);
+	-ms-transform: translateZ(120px) rotateY(-45deg);
+	transform: translateZ(120px) rotateY(-45deg);
+	left: 50px;
+	top: 200px;
+}
+
+.item.picture {
+	left: 400px;
+	margin: 0 auto;
+	top: 50px;
+}
+
+.item.picture .description {
+	top: 30px;
+	right: -350px;
+
+	-webkit-transform: translateZ(30px);
+	-moz-transform: translateZ(30px);
+	-o-transform: translateZ(30px);
+	-ms-transform: translateZ(30px);
+	transform: translateZ(30px);
+}
+
+.item#social {
+	left: 500px;
+	margin: 0 auto;
+	bottom: 150px;
+
+	-webkit-transform: scale(2) translateZ(1px);
+	-moz-transform: scale(2) translateZ(1px);
+	-o-transform: scale(2) translateZ(1px);
+	-ms-transform: scale(2) translateZ(1px);
+	transform: scale(2) translateZ(1px);
+}
+
+.item#social li {
+	display: inline-block;
+}
+
+.item.tv {
+	background: url("../images/tv.png") no-repeat;
+
+	-webkit-transform: translateZ(100px);
+	-moz-transform: translateZ(100px);
+	-o-transform: translateZ(100px);
+	-ms-transform: translateZ(100px);
+	transform: translateZ(100px);
+	bottom: 0;
+	height: 345px;
+	left: 325px;
+	margin: 0 auto;
+	width: 550px;
+}
+
+.item.tv a {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.item.tv video {
+	display: none;
+	left: 163px;
+	position: absolute;
+	top: 12px;
+
+	-webkit-transform: translateZ(1px);
+	-moz-transform: translateZ(1px);
+	-o-transform: translateZ(1px);
+	-ms-transform: translateZ(1px);
+	transform: translateZ(1px);
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
+.item.tv .description {
+	top: -210px;
+	right: 110px;
+
+	-webkit-transform: translateZ(-99px);
+	-moz-transform: translateZ(-99px);
+	-o-transform: translateZ(-99px);
+	-ms-transform: translateZ(-99px);
+	transform: translateZ(-99px);
+}
+
+.item.picture2 {
+	top: 30px;
+	left: 200px;
+
+	-webkit-transform: translateZ(10px);
+	-moz-transform: translateZ(10px);
+	-o-transform: translateZ(10px);
+	-ms-transform: translateZ(10px);
+	transform: translateZ(10px);
+}
+
+.item.picture2 .description {
+	top: 30px;
+	left: 250px;
+
+	-webkit-transform: translateZ(30px);
+	-moz-transform: translateZ(30px);
+	-o-transform: translateZ(30px);
+	-ms-transform: translateZ(30px);
+	transform: translateZ(30px);
+}
+
+.item.picture2 img {
+	-webkit-transform: rotateZ(7deg);
+	-moz-transform: rotateZ(7deg);
+	-o-transform: rotateZ(7deg);
+	-ms-transform: rotateZ(7deg);
+	transform: rotateZ(7deg);
+
+	-webkit-transition-duration: .5s;
+	-moz-transition-duration: .5s;
+	-o-transition-duration: .5s;
+	-ms-transition-duration: .5s;
+	transition-duration: .5s;
+}
+
+.item.picture2 img:hover {
+	-webkit-transform: rotateZ(0deg) translateZ(1px);
+	-moz-transform: rotateZ(0deg) translateZ(1px);
+	-o-transform: rotateZ(0deg) translateZ(1px);
+	-ms-transform: rotateZ(0deg) translateZ(1px);
+	transform: rotateZ(0deg) translateZ(1px);
+
+	-webkit-transition-duration: .5s;
+	-moz-transition-duration: .5s;
+	-o-transition-duration: .5s;
+	-ms-transition-duration: .5s;
+	transition-duration: .5s;
+}
+
+/*!PRODUCTS*/
+/*CONTROLS*/
+#keys{
+	right: 40px;
+	position: absolute;
+	bottom: 20px;
+	z-index: 99999;
+}
+#showcase {
+	cursor: pointer;
+	left: 50%;
+	margin-left: -24px;
+	opacity: 0.6;
+	position: absolute;
+	bottom: 35px;
+
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	-ms-transition-duration: 1s;
+	transition-duration: 1s;
+	width: 47px;
+	z-index: 99999;
+}
+
+#showcase:hover {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	-ms-transition-duration: 1s;
+	transition-duration: 1s;
+}
+
+/*
+The following code that is commentd out was originally used instead of JavaScript to control the left and right direction of the view. Using a techique first demonstrated here:  http://joelb.me/blog/2012/maintaining-css-style-states-using-infinite-transition-delays/ I was able to control the direction of the view using only CSS. As I also wanted to add the "Showcase" feature to the demo, I opted for a JS alternative instead.
+ */
+/*#left:active ~ .room {
+	-webkit-transition:  -webkit-transform 1500s 0s linear;
+	-moz-transition:  -moz-transform 1500s 0s linear;
+	-o-transition:  -o-transform 1500s 0s linear;
+	-ms-transition:  -ms-transform 1500s 0s linear;
+	transition:  transform 1500s 0s linear;
+	
+	-webkit-transform:  rotateY(-36000deg); /*allows for rotating up to 100 times*!/
+	-moz-transform:  rotateY(-36000deg);
+	-o-transform:  rotateY(-36000deg);	
+	-ms-transform:  rotateY(-36000deg);
+	transform:  rotateY(-36000deg);
+}
+
+#left ~ .room {
+	-webkit-transition:  -webkit-transform 0s 999999s linear;
+	-moz-transition:  -moz-transform 0s 999999s linear;
+	-o-transition:  -o-transform 0s 999999s linear;
+	-ms-transition:  -ms-transform 0s 999999s linear;
+	transition:  transform 0s 999999s linear;
+}
+
+#right:active ~ .room {
+	-webkit-transition:  -webkit-transform 1500s 0s linear;
+	-moz-transition:  -moz-transform 1500s 0s linear;
+	-o-transition:  -o-transform 1500s 0s linear;
+	-ms-transition:  -ms-transform 1500s 0s linear;
+	transition:  transform 1500s 0s linear;
+	
+	-webkit-transform:  rotateY(36000deg);  /*allows for rotating up to 100 times*!/
+	-moz-transform:  rotateY(36000deg);
+	-o-transform:  rotateY(36000deg);
+	-ms-transform:  rotateY(36000deg);
+	transform:  rotateY(36000deg);
+}
+
+#right ~ .room {
+	-webkit-transition:  -webkit-transform 0s 999999s linear;
+	-moz-transition:  -moz-transform 0s 999999s linear;
+	-o-transition:  -o-transform 0s 999999s linear;
+	-ms-transition:  -ms-transform 0s 999999s linear;
+	transition:  transform 0s 999999s linear;
+}
+
+#left, #right {
+	background:  rgba(0, 0, 0, 0.8);
+	color:  white;
+	cursor:  pointer;
+	font-weight:  bold;
+	padding:  10px 0 0 0;
+	position:  absolute;
+	height:  30px;
+	bottom:  40px;
+	text-align:  center;
+	width:  2%;
+	z-index:  1000;
+}
+
+#left {
+	border-top-left-radius:  8px;
+	border-bottom-left-radius:  8px;
+	left:  48%;
+}
+
+#right {
+	border-top-right-radius:  8px;
+	border-bottom-right-radius:  8px;
+	right:  48%;
+}
+
+*/
+/*!CONTROLS*/

@@ -1,0 +1,195 @@
+<html>
+	<head>
+		<title>CSS3 3D Furniture Showcase Demo</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="scripts/modernizr.js"></script>
+		<script src="scripts/rAF.js"></script>
+		<script src="scripts/script.js"></script>
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="./fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+		<script type="text/javascript" src="./fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+		<link rel="stylesheet" type="text/css" href="./fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+		<link rel="image_src" href="images/icon.jpg" />
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".product-link").fancybox({
+					'titlePosition'		: 'inside',
+					'transitionIn'		: 'fade',
+					'transitionOut'		: 'none'						
+				});
+			});
+		</script>
+			
+	</head>
+	<body>
+		<div id="room1">
+			<img id="showcase" title="" src="images/eye-off.png" alt="Showcase" />
+			<img id="keys" title="" src="images/keys.png" alt="Keys" />
+			<ul class="room">
+				<li class="floor">
+					<div class="item remote">
+							<!--http://www.sxc.hu/photo/1196729-->
+							<img id="click-remote" src="images/remote.png" alt="TV remote" />
+						<div class="description">
+							<h3>E. TV Remote</h3>
+							<p>Click to turn the TV on. Video and 3D may get processor heavy.</p>
+						</div>
+					</div>
+				</li>
+				<li class="first-wall">
+					<div class="item pot-plant">
+						<a class="product-link" href="#pot-plant">
+							<!--http://www.sxc.hu/browse.phtml?f=view&id=860097-->
+							<img src="images/pot-plant.png" alt="Pot plant" />
+							<img src="images/pot-plant.png" alt="Pot plant" />
+						</a>
+						<div class="description">
+							<h3>G. Pot Plant</h3>
+							<p>Here I've used two images of the same plant and rotated one to try and give more of a 3D effect (a technique used in many video games).</p>
+						</div>
+					</div>
+					
+					<div class="item sofa">
+						<a class="product-link" href="#sofa">
+							<!--http://www.sxc.hu/photo/718857-->
+							<img src="images/sofa2.png" alt="Sofa" />
+						</a>
+						<div class="description">
+							<h3>A. Sofa</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis tempus turpis a fermentum.</p>
+						</div>
+					</div>
+					
+					<div class="item clock">
+						<a class="product-link" href="#clock">
+							<img src="images/clock.png" alt="Clock" />
+						</a>
+						<div class="description">
+							<h3>B. Clock</h3>
+							<p>A fancy clock. This too could use CSS transforms and transitions to create the rotating hands.</p>
+						</div>
+					</div>
+				</li>
+				<li class="second-wall">
+					<div class="item picture">
+						<a href="http://www.ianlunn.co.uk/" title="Visit Ian Lunn Design">
+							<!--http://www.sxc.hu/photo/1205011-->
+							<img src="images/picture-frame.png" alt="The Ian Lunn Design logo in a picture frame" />
+						</a>
+						<div class="description">
+							<h3>C. Demo by Ian Lunn</h3>
+							<p>Click to visit his site and view more demos and tutorials using the latest web technologies.</p>
+						</div>
+					</div>
+					
+					<div class="item" id="social">
+						<a href="https://twitter.com/share" class="twitter-share-button" data-via="IanLunn" data-size="large">Tweet</a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					</div>
+				</li>
+				<li class="third-wall">
+					<div class="item tv">
+						<a class="product-link" href="#tv">
+						<!--http://www.sxc.hu/photo/1361461-->
+						<!-- video: http://en.wikipedia.org/wiki/File:Guillemot_theora_conversion_test.ogv-->
+							<video id="intro" preload="metadata" width="237" loop="loop" autoplay>
+								<source src="media/guillemot.ogv">
+							</video>
+						</a>
+						<div class="description">
+							<h3>D. Home Cinema System</h3>
+							<p>Turn the HTML5 video on by clicking the remote control. Note that Webkit seems to have a bug that prevents backface visibility working on video elements.</p>
+						</div>
+					</div>
+				</li>
+				<li class="fourth-wall">
+					<div class="item picture2">
+						<a class="product-link" href="#picture2">
+							<!--Photo frame: http://www.sxc.hu/photo/1205011-->
+							<img src="images/picture-granny.png" alt="Picture frame with photo of a sweet old granny inside" />
+						</a>
+						<div class="description">
+							<h3>F. Photo Frame</h3>
+							<p>A golden antique photo frame. Sweet old lady photo not included.</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		<div id="content">
+			<div id="browser-support">
+				<p>Bad news! You're browser doesn't support all of the necessary features required for this demo. Pants huh? If you'd like to see the super awesome 3D furniture showcase (no 3D glasses required), you can come back to this page in a browser such as Chrome, Firefox or Safari. The good news is, all of the content from the showcase is below (just displayed in a not so cool way) so you can pretend you didn't read this and carry on browsing a bunch of fake products. Enjoy!</p>
+			</div>
+			<ul id="products">
+				<li class="product" id="sofa">
+					<div class="product-image">
+						<img src="images/sofa2.png" alt="Sofa" />
+					</div>
+					<div class="product-details">
+						<h3>Sofa</h3>
+						<span class="price">&pound;499.99</span>
+						<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis tempus turpis a fermentum.</p>
+					</div>
+					<div class="purchase">Add to Basket</div>
+				</li>
+				<li class="product" id="clock">
+					<div class="product-image">
+						<img src="images/clock.png" alt="Clock" />
+					</div>
+					<div class="product-details">
+						<h3>Fancy Clock</h3>
+						<span class="price">&pound;29.99</span>
+						<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis tempus turpis a fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis tempus turpis a fermentum.</p>
+					</div>
+					<div class="purchase">Add to Basket</div>
+				</li>
+				<li class="product" id="picture">
+					<div class="product-image">
+						<img src="images/picture-frame.png" alt="The Ian Lunn Design logo in a picture frame" />
+					</div>
+					<div class="product-details">
+						<h3>Ian Lunn Design Picture</h3>
+						<span class="price">&pound;19.99</span>
+						<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis tempus turpis a fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis tempus turpis a fermentum.</p>
+					</div>
+					<div class="purchase">Add to Basket</div>
+				</li>
+				<li class="product" id="tv">
+					<div class="product-image">
+						<img src="images/tv.png" alt="A home cinema system" />
+					</div>
+					<div class="product-details">
+						<h3>Home Cinema System</h3>
+						<span class="price">&pound;1299.99</span>
+						<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis tempus turpis a fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis tempus turpis a fermentum.</p>
+					</div>
+					<div class="purchase">Add to Basket</div>
+				</li>
+				<li class="product" id="picture2">
+					<div class="product-image">
+						<img src="images/picture-granny.png" alt="Picture frame with photo of a sweet old granny inside" />
+					</div>
+					<div class="product-details">
+						<h3>Photo Frame</h3>
+						<span class="price">&pound;79.99</span>
+						<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis tempus turpis a fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis tempus turpis a fermentum.</p>
+					</div>
+					<div class="purchase">Add to Basket</div>
+				</li>
+				<li class="product" id="pot-plant">
+					<div class="product-image">
+						<img src="images/pot-plant.png" alt="A pot plant" />
+					</div>
+					<div class="product-details">
+						<h3>Pot Plant</h3>
+						<span class="price">&pound;24.99</span>
+						<p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis tempus turpis a fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis tempus turpis a fermentum.</p>
+					</div>
+					<div class="purchase">Add to Basket</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
