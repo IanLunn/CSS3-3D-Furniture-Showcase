@@ -331,7 +331,7 @@ h1, h2{
 	height: 600px;
 	margin: 0 auto;
 	position: relative;
-	width: 100%;
+	max-width: 1200px;
 	overflow: hidden;
 	-webkit-perspective: 900;
 	-moz-perspective: 900;
